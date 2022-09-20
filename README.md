@@ -1,13 +1,13 @@
 ### quicksort
 
-~~~text
+~~~sh
+❯ benchmark-driver quick_sort.yaml --rbenv '3.2.0-dev; 3.2.0-dev --yjit' --repeat-count 5
 Calculating -------------------------------------
-                      3.2.0-dev   3.2.0-dev --yjit   3.2.0-dev --mjit 
-          quick_sort   123.457k             2.952k           116.279k i/s -       1.000 times in 0.000008s 0.000339s 0.000009s
+                      3.2.0-dev   3.2.0-dev --yjit 
+               qsort   344.208k           811.061k i/s -     30.000k times in 0.087157s 0.036989s
 
 Comparison:
-                       quick_sort
-           3.2.0-dev:    123456.8 i/s 
-    3.2.0-dev --mjit:    116279.1 i/s - 1.06x  slower
-    3.2.0-dev --yjit:      2951.6 i/s - 41.83x  slower
+                            qsort
+    3.2.0-dev --yjit:    811060.7 i/s 
+           3.2.0-dev:    344208.0 i/s - 2.36x  slower
 ~~~
